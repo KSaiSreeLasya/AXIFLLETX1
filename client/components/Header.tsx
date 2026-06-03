@@ -39,10 +39,7 @@ export default function Header() {
           </nav>
 
           <div className="hidden lg:flex items-center gap-4">
-            <button className="px-6 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors">
-              Login
-            </button>
-            <button className="px-6 py-2 bg-electric hover:bg-electric-dark text-white rounded-lg font-medium transition-colors">
+            <button onClick={() => window.dispatchEvent(new CustomEvent('openContactForm'))} className="px-6 py-2 bg-electric hover:bg-electric-dark text-white rounded-lg font-medium transition-colors">
               Get Started
             </button>
           </div>
@@ -77,10 +74,7 @@ export default function Header() {
               </a>
             ))}
             <div className="flex flex-col gap-3 pt-4 border-t border-slate-200">
-              <button className="w-full px-4 py-2 text-sm font-medium text-slate-700 hover:text-slate-900">
-                Login
-              </button>
-              <button className="w-full px-4 py-2 bg-electric hover:bg-electric-dark text-white rounded-lg font-medium">
+              <button onClick={() => { setIsOpen(false); window.dispatchEvent(new CustomEvent('openContactForm')); }} className="w-full px-4 py-2 bg-electric hover:bg-electric-dark text-white rounded-lg font-medium">
                 Get Started
               </button>
             </div>

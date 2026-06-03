@@ -1,9 +1,11 @@
 import Header from "@/components/Header";
+import ContactForm from "@/components/ContactForm";
 import { ArrowRight, Zap, Shield, Bike, Users, TrendingUp, Network } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 export default function Index() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [contactFormOpen, setContactFormOpen] = useState(false);
   const heroBgRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -17,8 +19,17 @@ export default function Index() {
       }
     };
 
+    const handleOpenContactForm = () => {
+      setContactFormOpen(true);
+    };
+
     window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    window.addEventListener("openContactForm", handleOpenContactForm);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("openContactForm", handleOpenContactForm);
+    };
   }, []);
 
   return (
@@ -61,11 +72,11 @@ export default function Index() {
               </p>
 
               <div className="pt-6 flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-                <button className="px-8 py-4 bg-electric hover:bg-electric-dark text-white rounded-lg font-semibold flex items-center justify-center gap-2 transition-all hover:shadow-lg hover:shadow-electric/30 group">
+                <button onClick={() => setContactFormOpen(true)} className="px-8 py-4 bg-electric hover:bg-electric-dark text-white rounded-lg font-semibold flex items-center justify-center gap-2 transition-all hover:shadow-lg hover:shadow-electric/30 group">
                   Start Your Fleet Today
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
-                <button className="px-8 py-4 border-2 border-slate-300 hover:border-electric text-slate-900 rounded-lg font-semibold transition-all">
+                <button onClick={() => setContactFormOpen(true)} className="px-8 py-4 border-2 border-slate-300 hover:border-electric text-slate-900 rounded-lg font-semibold transition-all">
                   Watch Demo
                 </button>
               </div>
@@ -363,7 +374,7 @@ export default function Index() {
                     </div>
                   </div>
 
-                  <button className="w-full mt-6 px-4 py-3 bg-electric hover:bg-electric-dark text-white rounded-lg font-semibold transition-colors">
+                  <button onClick={() => setContactFormOpen(true)} className="w-full mt-6 px-4 py-3 bg-electric hover:bg-electric-dark text-white rounded-lg font-semibold transition-colors">
                     Invest Now
                   </button>
                 </div>
@@ -455,7 +466,7 @@ export default function Index() {
               ))}
             </div>
 
-            <button className="mt-8 px-8 py-4 bg-electric hover:bg-electric-dark text-white rounded-lg font-semibold transition-colors flex items-center gap-2 group">
+            <button onClick={() => setContactFormOpen(true)} className="mt-8 px-8 py-4 bg-electric hover:bg-electric-dark text-white rounded-lg font-semibold transition-colors flex items-center gap-2 group">
               Investor Relations
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
@@ -478,11 +489,11 @@ export default function Index() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-            <button className="px-8 py-4 bg-electric hover:bg-electric-dark text-white rounded-lg font-semibold transition-all hover:shadow-lg hover:shadow-electric/30 flex items-center justify-center gap-2 group">
+            <button onClick={() => setContactFormOpen(true)} className="px-8 py-4 bg-electric hover:bg-electric-dark text-white rounded-lg font-semibold transition-all hover:shadow-lg hover:shadow-electric/30 flex items-center justify-center gap-2 group">
               Get Started Today
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="px-8 py-4 border-2 border-slate-300 hover:border-electric text-slate-900 rounded-lg font-semibold transition-all">
+            <button onClick={() => setContactFormOpen(true)} className="px-8 py-4 border-2 border-slate-300 hover:border-electric text-slate-900 rounded-lg font-semibold transition-all">
               Schedule Demo
             </button>
           </div>
@@ -567,6 +578,8 @@ export default function Index() {
           </div>
         </div>
       </footer>
+
+      <ContactForm isOpen={contactFormOpen} onClose={() => setContactFormOpen(false)} />
     </div>
   );
 }
