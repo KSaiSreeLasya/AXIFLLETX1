@@ -6,12 +6,11 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { label: "Enterprise", href: "/" },
-    { label: "Quick Commerce", href: "/" },
-    { label: "Safety", href: "/" },
-    { label: "Hardware", href: "/" },
-    { label: "Invest", href: "/" },
-    { label: "Partners", href: "/" },
+    { label: "Enterprise", href: "/enterprise" },
+    { label: "Quick Commerce", href: "/quick-commerce" },
+    { label: "Safety", href: "/safety" },
+    { label: "Invest", href: "/invest" },
+    { label: "Partners", href: "/partners" },
   ];
 
   return (
@@ -28,13 +27,13 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={link.href}
                 className="text-sm font-medium text-slate-600 hover:text-electric transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -64,14 +63,14 @@ export default function Header() {
         <div className="lg:hidden border-t border-slate-200 bg-white">
           <nav className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={link.href}
                 className="block text-sm font-medium text-slate-600 hover:text-electric py-2"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <div className="flex flex-col gap-3 pt-4 border-t border-slate-200">
               <button onClick={() => { setIsOpen(false); window.dispatchEvent(new CustomEvent('openContactForm')); }} className="w-full px-4 py-2 bg-electric hover:bg-electric-dark text-white rounded-lg font-medium">
