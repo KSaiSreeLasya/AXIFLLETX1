@@ -39,9 +39,9 @@ export default function Header() {
           </nav>
 
           <div className="hidden lg:flex items-center gap-4">
-            <button onClick={() => window.dispatchEvent(new CustomEvent('openContactForm'))} className="px-6 py-2 bg-electric hover:bg-electric-dark text-white rounded-lg font-medium transition-colors">
+            <Link to="/get-started" className="px-6 py-2 bg-electric hover:bg-electric-dark text-white rounded-lg font-medium transition-colors">
               Get Started
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -74,9 +74,13 @@ export default function Header() {
               </Link>
             ))}
             <div className="flex flex-col gap-3 pt-4 border-t border-slate-200">
-              <button onClick={() => { setIsOpen(false); window.dispatchEvent(new CustomEvent('openContactForm')); }} className="w-full px-4 py-2 bg-electric hover:bg-electric-dark text-white rounded-lg font-medium">
+              <Link
+                to="/get-started"
+                className="w-full px-4 py-2 bg-electric hover:bg-electric-dark text-white rounded-lg font-medium text-center"
+                onClick={() => setIsOpen(false)}
+              >
                 Get Started
-              </button>
+              </Link>
             </div>
           </nav>
         </div>

@@ -12,6 +12,7 @@ import QuickCommerce from "./pages/QuickCommerce";
 import Safety from "./pages/Safety";
 import Invest from "./pages/Invest";
 import Partners from "./pages/Partners";
+import GetStarted from "./pages/GetStarted";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/safety" element={<Safety />} />
           <Route path="/invest" element={<Invest />} />
           <Route path="/partners" element={<Partners />} />
+          <Route path="/get-started" element={<GetStarted />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

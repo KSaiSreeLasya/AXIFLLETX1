@@ -103,12 +103,12 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4 className="text-white font-semibold text-sm uppercase tracking-wide mb-6">Get in Touch</h4>
-            <button
-              onClick={() => window.dispatchEvent(new CustomEvent('openContactForm'))}
-              className="w-full px-4 py-2 bg-electric hover:bg-electric-dark text-white rounded-lg font-medium transition-colors text-sm mb-4"
+            <Link
+              to="/get-started"
+              className="block w-full px-4 py-2 bg-electric hover:bg-electric-dark text-white rounded-lg font-medium transition-colors text-sm mb-4 text-center"
             >
-              Contact Us
-            </button>
+              Get Started
+            </Link>
             <p className="text-xs text-slate-400">
               Have questions? Our team is here to help.
             </p>
