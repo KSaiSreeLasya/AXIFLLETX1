@@ -6,6 +6,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
+    { label: "Home", href: "/" },
     { label: "Enterprise", href: "/enterprise" },
     { label: "Quick Commerce", href: "/quick-commerce" },
     { label: "Safety", href: "/safety" },
