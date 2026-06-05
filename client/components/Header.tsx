@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-24 py-4">
           <Link to="/" className="flex items-center gap-2">
             <img src="https://cdn.builder.io/api/v1/image/assets%2Fe8b0f34e11e04fd5ad5fe77ca26e5a4c%2F73c13c7590b84504a1759227685c255e?format=webp&width=800&height=1200" alt="AxifleetX" className="w-20 h-20" />
           </Link>
