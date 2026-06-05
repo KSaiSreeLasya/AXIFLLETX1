@@ -501,17 +501,14 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white py-16 px-4 sm:px-6 lg:px-8">
+      <footer className="bg-white text-slate-600 py-16 px-4 sm:px-6 lg:px-8 border-t border-slate-200">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-5 gap-12 mb-12">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-electric rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">Axi</span>
-                </div>
-                <span className="font-bold text-lg">AxifleetX</span>
+              <div className="flex items-center gap-2 mb-6">
+                <img src="https://cdn.builder.io/api/v1/image/assets%2Fe8b0f34e11e04fd5ad5fe77ca26e5a4c%2F73c13c7590b84504a1759227685c255e?format=webp&width=800&height=1200" alt="AxifleetX" className="w-14 h-14 flex-shrink-0" />
               </div>
-              <p className="text-slate-400 text-sm">
+              <p className="text-slate-600 text-sm">
                 Precision Mobility for the Zero-Emission Supply Chain.
               </p>
             </div>
@@ -545,13 +542,13 @@ export default function Index() {
               },
             ].map((col, i) => (
               <div key={i}>
-                <h3 className="font-semibold mb-4">{col.title}</h3>
+                <h3 className="font-semibold mb-4 text-slate-900">{col.title}</h3>
                 <ul className="space-y-2">
                   {col.links.map((link, j) => (
                     <li key={j}>
                       <a
                         href="#"
-                        className="text-slate-400 hover:text-white transition-colors text-sm"
+                        className="text-slate-600 hover:text-electric transition-colors text-sm"
                       >
                         {link}
                       </a>
@@ -562,16 +559,16 @@ export default function Index() {
             ))}
           </div>
 
-          <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-slate-400 text-sm">
+          <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center text-slate-600 text-sm">
             <p>© 2024 AxifleetX. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-white transition-colors">
+              <a href="#" className="text-slate-600 hover:text-electric transition-colors">
                 Twitter
               </a>
-              <a href="#" className="hover:text-white transition-colors">
+              <a href="#" className="text-slate-600 hover:text-electric transition-colors">
                 LinkedIn
               </a>
-              <a href="#" className="hover:text-white transition-colors">
+              <a href="#" className="text-slate-600 hover:text-electric transition-colors">
                 GitHub
               </a>
             </div>
