@@ -506,7 +506,7 @@ export default function Index() {
           <div className="grid md:grid-cols-5 gap-12 mb-12">
             <div>
               <div className="flex items-center gap-2 mb-6">
-                <img src="https://cdn.builder.io/api/v1/image/assets%2Fe8b0f34e11e04fd5ad5fe77ca26e5a4c%2F73c13c7590b84504a1759227685c255e?format=webp&width=800&height=1200" alt="AxifleetX" className="w-14 h-14 flex-shrink-0" />
+                <img src="https://cdn.builder.io/api/v1/image/assets%2Fe8b0f34e11e04fd5ad5fe77ca26e5a4c%2F73c13c7590b84504a1759227685c255e?format=webp&width=800&height=1200" alt="AxifleetX" className="w-20 h-20 flex-shrink-0" />
               </div>
               <p className="text-slate-600 text-sm">
                 Precision Mobility for the Zero-Emission Supply Chain.
