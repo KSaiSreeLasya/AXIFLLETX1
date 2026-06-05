@@ -9,9 +9,7 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-4 hover:opacity-80 transition-opacity">
-              <div className="w-8 h-8 bg-gradient-to-br from-electric to-electric-dark rounded-lg flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-sm">Axi</span>
-              </div>
+              <img src="/favicon-192x192.png" alt="AxifleetX" className="w-8 h-8 flex-shrink-0" />
               <span className="font-bold text-lg text-white">AxifleetX</span>
             </Link>
             <p className="text-sm text-slate-400 leading-relaxed">
