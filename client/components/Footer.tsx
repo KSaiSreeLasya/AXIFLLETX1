@@ -21,13 +21,8 @@ export default function Footer() {
             <h4 className="text-slate-900 font-semibold text-sm uppercase tracking-wide mb-6">Solutions</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-slate-600 hover:text-electric transition-colors text-sm">
-                  Home
-                </Link>
-              </li>
-              <li>
                 <Link to="/enterprise" className="text-slate-600 hover:text-electric transition-colors text-sm">
-                  Enterprise Leasing
+                  Enterprise
                 </Link>
               </li>
               <li>
@@ -36,8 +31,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/safety" className="text-slate-600 hover:text-electric transition-colors text-sm">
+                  Safety
+                </Link>
+              </li>
+              <li>
                 <Link to="/invest" className="text-slate-600 hover:text-electric transition-colors text-sm">
-                  Fractional Ownership
+                  Invest
                 </Link>
               </li>
             </ul>
@@ -53,8 +53,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/safety" className="text-slate-600 hover:text-electric transition-colors text-sm">
-                  Safety & Compliance
+                <Link to="/get-started" className="text-slate-600 hover:text-electric transition-colors text-sm">
+                  Get Started
                 </Link>
               </li>
               <li>
@@ -70,29 +70,29 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Legal */}
           <div>
-            <h4 className="text-slate-900 font-semibold text-sm uppercase tracking-wide mb-6">Resources</h4>
+            <h4 className="text-slate-900 font-semibold text-sm uppercase tracking-wide mb-6">Legal</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-slate-600 hover:text-electric transition-colors text-sm">
-                  Documentation
-                </a>
+                <Link to="/privacy" className="text-slate-600 hover:text-electric transition-colors text-sm">
+                  Privacy Policy
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-slate-600 hover:text-electric transition-colors text-sm">
-                  API Docs
-                </a>
+                <Link to="/terms" className="text-slate-600 hover:text-electric transition-colors text-sm">
+                  Terms of Service
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-slate-600 hover:text-electric transition-colors text-sm">
-                  Support
-                </a>
+                <Link to="/security" className="text-slate-600 hover:text-electric transition-colors text-sm">
+                  Security
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-slate-600 hover:text-electric transition-colors text-sm">
-                  FAQ
-                </a>
+                <Link to="/compliance" className="text-slate-600 hover:text-electric transition-colors text-sm">
+                  Compliance
+                </Link>
               </li>
             </ul>
           </div>
@@ -119,15 +119,15 @@ export default function Footer() {
               © 2024 AxifleetX. All rights reserved.
             </p>
             <div className="flex gap-6 text-xs">
-              <a href="#" className="text-slate-600 hover:text-electric transition-colors">
+              <Link to="/privacy" className="text-slate-600 hover:text-electric transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-slate-600 hover:text-electric transition-colors">
+              </Link>
+              <Link to="/terms" className="text-slate-600 hover:text-electric transition-colors">
                 Terms of Service
-              </a>
-              <a href="#" className="text-slate-600 hover:text-electric transition-colors">
-                Cookie Policy
-              </a>
+              </Link>
+              <Link to="/security" className="text-slate-600 hover:text-electric transition-colors">
+                Security
+              </Link>
             </div>
           </div>
         </div>
