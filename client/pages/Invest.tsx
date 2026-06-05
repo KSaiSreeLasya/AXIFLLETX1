@@ -1,8 +1,14 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useState } from "react";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function Invest() {
+  useSEO({
+    title: "Business Process Automation Solutions | AxifleetX",
+    description: "Streamline workflows, reduce manual effort, and improve operational efficiency with intelligent automation services.",
+    canonical: "https://axifleetx.com/invest",
+  });
   const [numVehicles, setNumVehicles] = useState(1);
 
   // Simple ROI calculation

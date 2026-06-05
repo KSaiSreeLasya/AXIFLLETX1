@@ -1,7 +1,13 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function Enterprise() {
+  useSEO({
+    title: "AI & Data Analytics Services | AxifleetX",
+    description: "Explore AI development, predictive analytics, automation, dashboard creation, and digital transformation services tailored to your business goals.",
+    canonical: "https://axifleetx.com/enterprise",
+  });
   return (
     <>
       <Header />

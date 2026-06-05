@@ -3,9 +3,15 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import { useEffect } from "react";
 import { ArrowRight } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
 
 const NotFound = () => {
   const location = useLocation();
+  useSEO({
+    title: "Page Not Found | AxifleetX",
+    description: "The page you're looking for doesn't exist. Head back to explore AxifleetX's AI solutions and services.",
+    canonical: "https://axifleetx.com/404",
+  });
 
   useEffect(() => {
     console.error(

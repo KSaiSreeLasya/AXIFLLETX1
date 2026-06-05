@@ -13,6 +13,10 @@ import Safety from "./pages/Safety";
 import Invest from "./pages/Invest";
 import Partners from "./pages/Partners";
 import GetStarted from "./pages/GetStarted";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import Security from "./pages/Security";
+import Compliance from "./pages/Compliance";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +35,10 @@ const App = () => (
           <Route path="/invest" element={<Invest />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/get-started" element={<GetStarted />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/security" element={<Security />} />
+          <Route path="/compliance" element={<Compliance />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -1,7 +1,13 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function QuickCommerce() {
+  useSEO({
+    title: "Data Analytics Solutions for Better Business Decisions | AxifleetX",
+    description: "Unlock actionable insights from your data with advanced analytics, visualization, reporting, and business intelligence solutions.",
+    canonical: "https://axifleetx.com/quick-commerce",
+  });
   return (
     <>
       <Header />

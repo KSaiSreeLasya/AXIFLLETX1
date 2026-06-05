@@ -1,7 +1,13 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function Safety() {
+  useSEO({
+    title: "Business Intelligence & Dashboard Development | AxifleetX",
+    description: "Create powerful dashboards and BI solutions that help organizations monitor performance and make informed decisions.",
+    canonical: "https://axifleetx.com/safety",
+  });
   return (
     <>
       <Header />
