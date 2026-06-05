@@ -1,7 +1,13 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function Partners() {
+  useSEO({
+    title: "Digital Transformation Consulting Services | AxifleetX",
+    description: "Accelerate growth through modern technology, cloud solutions, AI integration, and digital innovation strategies.",
+    canonical: "https://axifleetx.com/partners",
+  });
   return (
     <>
       <Header />

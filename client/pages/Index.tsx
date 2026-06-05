@@ -2,8 +2,14 @@ import Header from "@/components/Header";
 import ContactForm from "@/components/ContactForm";
 import { ArrowRight, Zap, Shield, Bike, Users, TrendingUp, Network } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function Index() {
+  useSEO({
+    title: "AxifleetX – AI, Data Analytics & Digital Transformation Solutions",
+    description: "Transform your business with AI-powered analytics, automation, business intelligence, and innovative digital solutions designed for growth and efficiency.",
+    canonical: "https://axifleetx.com/",
+  });
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [contactFormOpen, setContactFormOpen] = useState(false);
   const heroBgRef = useRef<HTMLDivElement>(null);

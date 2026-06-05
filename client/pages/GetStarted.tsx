@@ -1,8 +1,14 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useState } from "react";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function GetStarted() {
+  useSEO({
+    title: "Get Started with AxifleetX | AI & Analytics Solutions",
+    description: "Start your digital transformation journey with AxifleetX. Get in touch with our experts for AI development, analytics consulting, automation, and digital transformation solutions.",
+    canonical: "https://axifleetx.com/get-started",
+  });
   const [formData, setFormData] = useState({
     company_name: "",
     contact_person: "",
